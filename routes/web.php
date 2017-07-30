@@ -5,7 +5,8 @@ Route::group([
     'middleware' => ['web']
 ], function () {
     Route::get('/dashboard', 'DashboardController@index')
-        ->middleware(config('dashboard.auth_middleware', 'auth'));
+        ->middleware(config('dashboard.auth_middleware', 'auth'))
+        ->name('dashboard');
 
     Route::post('/webhook/github', 'GitHubWebhookController@gitRepoReceivedPush');
 });
