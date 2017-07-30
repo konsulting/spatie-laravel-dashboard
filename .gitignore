@@ -1,0 +1,14 @@
+# BACK END
+/.idea
+.env
+_ide_helper*.php
+/vendor
+
+# FRONT END
+/node_modules
+/npm-debug.log
+/public/build
+/public/css
+/public/js
+/public/media
+/public/mix-manifest.json
