@@ -3,6 +3,7 @@
 namespace Spatie\LaravelDashboard\Console;
 
 use Illuminate\Console\Command;
+use Spatie\LaravelDashboard\Events\DashboardUpdated;
 
 class UpdateDashboard extends Command
 {
@@ -18,5 +19,7 @@ class UpdateDashboard extends Command
         $this->call('dashboard:fetch-current-track');
         $this->call('dashboard:fetch-packagist-totals');
         $this->call('dashboard:fetch-tasks');
+
+        event(new DashboardUpdated);
     }
 }
