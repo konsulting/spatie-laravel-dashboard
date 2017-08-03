@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\LaravelDashboard;
+namespace Spatie\LaravelDashboard\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 

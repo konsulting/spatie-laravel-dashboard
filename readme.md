@@ -13,9 +13,9 @@ With a new laravel app...
  - `php artisan migrate`
  - Add a user: perhaps use `php artisan tinker`
  - Add the `Spatie\\LaravelDashboard\\Providers\\DashboardServiceProvider` to your `provider` in `config/app.php`
- - Add the schedule to your console kernel. Add `(new DashboardSchedule($schedule))->handle();` to the `handle` method.
+ - Add the schedule to your console kernel. Add `(new Spatie\LaravelDashboard\Console\Schedule($schedule))->handle();` to the `handle` method.
  - Add your pusher cluster settings to the `config/broadcasting.php` file 
-```
+```php
 'pusher' => [
     ...
     'options' => [
@@ -40,6 +40,11 @@ You need to be comfortable with Vue and Laravel
 - `php artisan vendor:publish --provider=Spatie\\LaravelDashboard\\Providers\\DashboardServiceProvider --tag=advanced`
 - add babel.rc and all package.json reqt's (see the packages .babelrc and package.json)
 - `npm run prod` to build the necessary files. 
+
+- You can override the schedule by using your own `Schedule` class instead 
+of `Spatie\LaravelDashboard\Console\Schedule($schedule`.
+- You can either add to the Dashboard Update command by listening for the `DashboardUpdated` event, 
+or by creating a new Command set in `Spatie\Console\UpdateDshboardCommandSet` 
 
 ## License
 

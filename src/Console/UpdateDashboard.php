@@ -13,12 +13,8 @@ class UpdateDashboard extends Command
 
     public function handle()
     {
-        $this->call('dashboard:fetch-github-totals');
-        $this->call('dashboard:fetch-calendar-events');
-        $this->call('dashboard:send-heartbeat');
-        $this->call('dashboard:fetch-current-track');
-        $this->call('dashboard:fetch-packagist-totals');
-        $this->call('dashboard:fetch-tasks');
+        $commandSet = config('dashboard.update_command_set', UpdateDashboardCommandSet::class);
+        $commandSet();
 
         event(new DashboardUpdated);
     }
