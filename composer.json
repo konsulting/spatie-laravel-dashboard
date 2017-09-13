@@ -43,5 +43,12 @@
         "classmap": [
             "tests/TestCase.php"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\LaravelDashboard\\Providers\\DashboardServiceProvider"
+            ]
+        }
     }
 }
