@@ -5,8 +5,6 @@ namespace Spatie\LaravelDashboard\Providers;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Spatie\LaravelDashboard\Services\GitHub\GitHubServiceProvider;
-use Spatie\GoogleCalendar\GoogleCalendarFacade;
-use Spatie\GoogleCalendar\GoogleCalendarServiceProvider;
 use Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiFacade;
 use Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider;
 
@@ -14,12 +12,10 @@ class PackageServiceProvider extends ServiceProvider
 {
     protected $providersToRegister = [
         GitHubServiceProvider::class,
-        GoogleCalendarServiceProvider::class,
         TwitterStreamingApiServiceProvider::class,
     ];
 
     protected $facadesToRegister = [
-        'GoogleCalendar' => GoogleCalendarFacade::class,
         'TwitterStreamingApi' => TwitterStreamingApiFacade::class,
     ];
 
