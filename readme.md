@@ -13,7 +13,7 @@ With a new Laravel 5.5 app:
  - `php artisan migrate`
  - Add a user: perhaps use `php artisan tinker`
  - The `Spatie\\LaravelDashboard\\Providers\\DashboardServiceProvider` is now auto-registered.
- - Add the schedule to your console kernel. Add `(new Spatie\LaravelDashboard\Console\Schedule($schedule))->handle();` to the `handle` method.
+ - Add the schedule to your console kernel. Add `(new \Spatie\LaravelDashboard\Console\DashboardSchedule($schedule))->handle();` to the `handle` method.
  - Add your pusher cluster settings to the `config/broadcasting.php` file
 ```php
 'pusher' => [
@@ -42,9 +42,9 @@ You need to be comfortable with Vue and Laravel
 - `npm run prod` to build the necessary files.
 
 - You can override the schedule by using your own `Schedule` class instead
-of `Spatie\LaravelDashboard\Console\Schedule($schedule)`.
+of `Spatie\LaravelDashboard\Console\DashboardSchedule($schedule)`.
 - You can either add to the Dashboard Update command by listening for the `DashboardUpdated` event,
-or by creating a new Command set in `Spatie\Console\UpdateDshboardCommandSet`
+or by creating a new Command set in `Spatie\Console\UpdateDashboardCommandSet`
 
 ## License
 
