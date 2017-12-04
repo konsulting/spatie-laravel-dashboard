@@ -17,6 +17,7 @@
     margin-top: var(--grid-gap);
     padding: var(--grid-gap) 0;
     border-top: dotted 2px rgba(255, 255, 255, .15);
+    word-break: break-word;
 }
 
 .tweet__header {

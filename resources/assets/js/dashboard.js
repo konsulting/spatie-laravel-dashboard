@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import Calendar from './components/Calendar';
 import Github from './components/Github';
 import InternetConnection from './components/InternetConnection';
+import Npm from '.components/Npm';
 import Music from './components/Music';
 import Packagist from './components/Packagist';
 import Tasks from './components/Tasks';
@@ -24,6 +25,7 @@ new Vue({
         Github,
         InternetConnection,
         Music,
+        Npm,
         Packagist,
         Tasks,
         TimeWeather,

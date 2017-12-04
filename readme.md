@@ -34,6 +34,15 @@ With a new Laravel 5.5 app:
 
 Simple customisations are possible through the config file (`config/dashboard.php`) and the dashboard view (`resources/views/vendor/dashboard/dashbooard.blade.php`).
 
+If using any of these routes, you may need to explude them in your VerifyCsrfToken middleware.
+```php
+      protected $except = [
+          '/webhook/github',
+          '/pusher/authenticate',
+          '/oh-dear-webhooks',
+      ];
+```
+
 ### To fully customise, it needs more work
 You need to be comfortable with Vue and Laravel
 

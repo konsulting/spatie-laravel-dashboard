@@ -9,5 +9,7 @@ Route::group([
         ->name('dashboard');
 
     Route::post('/webhook/github', 'GitHubWebhookController@gitRepoReceivedPush');
+
+    Route::ohDearWebhooks('/oh-dear-webhooks');
 });
 
