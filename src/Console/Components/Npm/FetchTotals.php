@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Console\Components\Npm;
+namespace Spatie\LaravelDashboard\Console\Components\Npm;
 
-use App\Events\Npm\TotalsFetched;
 use Developmint\NpmStats\NpmStats;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
+use Spatie\LaravelDashboard\Events\Npm\TotalsFetched;
 
 class FetchTotals extends Command
 {

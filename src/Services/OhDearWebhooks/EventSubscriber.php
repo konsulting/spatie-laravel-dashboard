@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services\OhDearWebhooks;
+namespace Spatie\LaravelDashboard\Services\OhDearWebhooks;
 
 use Illuminate\Events\Dispatcher;
-use App\Events\Uptime\UptimeCheckFailed;
-use App\Events\Uptime\UptimeCheckRecovered;
 use OhDear\LaravelWebhooks\OhDearWebhookCall;
+use Spatie\LaravelDashboard\Events\Uptime\UptimeCheckFailed;
+use Spatie\LaravelDashboard\Events\Uptime\UptimeCheckRecovered;
 
 class EventSubscriber
 {
@@ -27,12 +27,12 @@ class EventSubscriber
     {
         $events->listen(
             'ohdear-webhooks::uptimeCheckFailed',
-            'App\Services\OhDearWebhooks\EventSubscriber@onUptimeCheckFailed'
+            'Spatie\LaravelDashboard\Services\OhDearWebhooks\EventSubscriber@onUptimeCheckFailed'
         );
 
         $events->listen(
             'ohdear-webhooks::uptimeCheckRecovered',
-            'App\Services\OhDearWebhooks\EventSubscriber@onUptimeCheckRecovered'
+            'Spatie\LaravelDashboard\Services\OhDearWebhooks\EventSubscriber@onUptimeCheckRecovered'
         );
     }
 }

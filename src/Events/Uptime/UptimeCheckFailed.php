@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Events\Uptime;
+namespace Spatie\LaravelDashboard\Events\Uptime;
 
-use App\Events\DashboardEvent;
+use Spatie\LaravelDashboard\Events\DashboardEvent;
 
 class UptimeCheckFailed extends DashboardEvent
 {
