@@ -18,7 +18,6 @@
 
 <script>
     import Tile from './atoms/Tile';
-    import moment from 'moment';
     import moment from 'moment-timezone';
     import weather from '../services/weather/Weather';
 
