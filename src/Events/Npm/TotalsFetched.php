@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Events\Npm;
+namespace Spatie\LaravelDashboard\Events\Npm;
 
-use App\Events\DashboardEvent;
+use Spatie\LaravelDashboard\Events\DashboardEvent;
 
 class TotalsFetched extends DashboardEvent
 {

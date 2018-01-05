@@ -13,6 +13,7 @@ use Spatie\LaravelDashboard\Console\Components\Calendar\FetchCalendarEvents;
 use Spatie\LaravelDashboard\Console\Components\InternetConnection\SendHeartbeat;
 use Spatie\LaravelDashboard\Console\Components\GitHub\FetchTotals as FetchGithubTotals;
 use Spatie\LaravelDashboard\Console\Components\Packagist\FetchTotals as FetchPackagistTotals;
+use Spatie\LaravelDashboard\Console\Components\Npm\FetchTotals as FetchNpmTotals;
 
 class DashboardServiceProvider extends ServiceProvider
 {
@@ -79,6 +80,7 @@ class DashboardServiceProvider extends ServiceProvider
             ListenForQuotes::class,
             SendFakeTweet::class,
             UpdateDashboard::class,
+            FetchNpmTotals::class,
         ]);
     }
 }
