@@ -20,6 +20,7 @@ class UpdateDashboardCommandSet
         $this->kernel->call('dashboard:send-heartbeat');
         $this->kernel->call('dashboard:fetch-current-track');
         $this->kernel->call('dashboard:fetch-packagist-totals');
+        $this->kernel->call('dashboard:fetch-npm-totals');
         $this->kernel->call('dashboard:fetch-tasks');
     }
 }

@@ -21,5 +21,6 @@ class DashboardSchedule
         $this->schedule->command('dashboard:fetch-tasks')->everyFiveMinutes();
         $this->schedule->command('dashboard:fetch-github-totals')->everyThirtyMinutes();
         $this->schedule->command('dashboard:fetch-packagist-totals')->hourly();
+        $this->schedule->command('dashboard:fetch-npm-totals')->hourly();
     }
 }

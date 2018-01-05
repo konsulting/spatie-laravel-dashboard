@@ -46,6 +46,6 @@ return [
                 '@spatie_be',
                 'github.com/spatie',
             ]
-        ]
+        ],
     ],
 ];
