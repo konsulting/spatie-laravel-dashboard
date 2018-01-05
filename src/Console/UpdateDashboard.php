@@ -14,7 +14,7 @@ class UpdateDashboard extends Command
     public function handle()
     {
         $commandSet = config('dashboard.update_command_set', UpdateDashboardCommandSet::class);
-        $commandSet();
+        app($commandSet)->runCommands();
 
         event(new DashboardUpdated);
     }

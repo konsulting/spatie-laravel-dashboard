@@ -13,7 +13,7 @@ class UpdateDashboardCommandSet
         $this->kernel = $kernel;
     }
 
-    public function __invoke()
+    public function runCommands()
     {
         $this->kernel->call('dashboard:fetch-github-totals');
         $this->kernel->call('dashboard:fetch-calendar-events');
