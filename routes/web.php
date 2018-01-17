@@ -10,6 +10,11 @@ Route::group([
 
     Route::post('/webhook/github', 'GitHubWebhookController@gitRepoReceivedPush');
 
-    Route::ohDearWebhooks('/oh-dear-webhooks');
+    // Oh dear package registers this macro in the boot() method of the service provider.
+    // Which may not have occurred before we register these routes
+    // Route::ohDearWebhooks('/oh-dear-webhooks');
+    // So we'll do it manually for now
+
+    Route::post('/oh-dear-webhooks', '\OhDear\LaravelWebhooks\OhDearWebhooksController');
 });
 
