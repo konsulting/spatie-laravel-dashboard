@@ -6,7 +6,7 @@ We will offer this repo to Spatie for them to maintain, so it may not exist for 
 
 ## Installation
 
-With a new Laravel 5.5 app:
+With a new Laravel 5.6 app:
 
  - `composer require konsulting/spatie-laravel-dashboard`
  - `php artisan make:auth`
@@ -47,7 +47,6 @@ If using any of these routes, you may need to explude them in your VerifyCsrfTok
 You need to be comfortable with Vue and Laravel
 
 - `php artisan vendor:publish --provider=Spatie\\LaravelDashboard\\Providers\\DashboardServiceProvider --tag=advanced`
-- add babel.rc and all package.json reqt's (see the packages .babelrc and package.json)
 - `npm run prod` to build the necessary files.
 
 - You can override the schedule by using your own `Schedule` class instead

@@ -1,5 +1,5 @@
 <template>
-    <tile v-if="hasNotifications" :position="position" modifiers="overflow yellow above">
+    <tile v-if="hasFailingUrls" :position="position" modifiers="overflow yellow above">
         <section class="uptime">
             <h1 class="uptime__title">Downtime</h1>
             <ul class="uptime__notifications">
@@ -42,7 +42,7 @@
         },
 
         computed: {
-            hasNotifications() {
+            hasFailingUrls() {
                 return this.failingUrls.length > 0;
             },
         },

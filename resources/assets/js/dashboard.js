@@ -16,9 +16,7 @@ import Twitter from './components/Twitter';
 import Uptime from './components/Uptime';
 
 new Vue({
-
     el: '#dashboard',
-
     components: {
         Dashboard,
         Calendar,
@@ -34,7 +32,6 @@ new Vue({
     },
 
     created() {
-
         let options = {
             broadcaster: 'pusher',
             key: window.dashboard.pusherKey,
