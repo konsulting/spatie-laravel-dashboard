@@ -1,5 +1,7 @@
 # Spatie.be Laravel Dashboard
 
+## This package is now abandoned, with the introduction of a new more extendable dashboard by Spatie.
+
 Packaged version of the [Spatie's Laravel Dashboard](https://github.com/spatie/dashboard.spatie.be). The aim is to allow this handsome dashboard to be pulled into other projects, or customised heavily while keeping the core code isolated.
 
 We will offer this repo to Spatie for them to maintain, so it may not exist for too long here.
