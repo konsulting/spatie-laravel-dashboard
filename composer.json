@@ -1,5 +1,6 @@
 {
     "name": "konsulting/spatie-laravel-dashboard",
+    "abandoned": true,
     "description": "Spatie's Laravel Dashboard package.",
     "keywords": [
         "framework",
